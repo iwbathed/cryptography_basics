@@ -1,10 +1,8 @@
 def inverse_element(a, p):
     if a % p == 0:
-        return None  # Оборотного елемента не існує, якщо a і p не взаємно прості
-    # Знаходимо обернений елемент за формулою a^(p-2) mod p
+        return None
     return pow(a, p - 2, p)
 
-# Тест
 a, p = 5, 18
 inv = inverse_element(a, p)
 if inv is not None:
